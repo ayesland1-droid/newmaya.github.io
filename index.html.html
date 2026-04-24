@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>马雅雯 · 市场营销作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --moss:       #4a6741;
+  --moss-deep:  #2e4229;
+  --moss-mid:   #7a9870;
+  --moss-pale:  #eef2ea;
+  --moss-line:  #c4cfc0;
+  --ink:        #1a1a1a;
+  --gray:       #6b6b6b;
+  --gray-light: #a0a0a0;
+  --cream:      #f8f5ef;
+  --page:       #fdfcf8;
+  --white:      #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 56px;
+  background: rgba(253,252,248,0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--moss-line);
+}
+.nav-brand { font-size: 12px; letter-spacing: 0.35em; color: var(--moss-deep); font-weight: 500; text-transform: uppercase; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { font-size: 11px; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; transition: color 0.3s; font-family: 'Noto Sans SC', sans-serif; }
+.nav-links a:hover { color: var(--moss); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 60px;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px 56px;
+  border-right: 1px solid var(--moss-line);
+}
+.hero-tag { font-size: 10px; letter-spacing: 0.5em; color: var(--moss); text-transform: uppercase; margin-bottom: 28px; font-family: 'Noto Sans SC', sans-serif; }
+.hero-name { font-size: clamp(44px, 5vw, 72px); font-weight: 300; line-height: 1.15; letter-spacing: 0.08em; color: var(--ink); margin-bottom: 12px; }
+.hero-en { font-size: 11px; letter-spacing: 0.4em; color: var(--moss-mid); text-transform: uppercase; margin-bottom: 44px; font-family: 'Noto Sans SC', sans-serif; }
+.hero-divider { width: 36px; height: 1px; background: var(--moss); margin-bottom: 36px; }
+.hero-bio { font-size: 13.5px; color: var(--gray); line-height: 2.2; letter-spacing: 0.06em; max-width: 380px; }
+.hero-stats {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px; background: var(--moss-line);
+  margin-top: 56px;
+  border: 1px solid var(--moss-line);
+}
+.stat {
+  background: var(--page); padding: 20px 16px; text-align: center;
+}
+.stat-num { font-size: 22px; font-weight: 400; color: var(--moss-deep); letter-spacing: 0.05em; display: block; }
+.stat-label { font-size: 10px; letter-spacing: 0.2em; color: var(--gray-light); text-transform: uppercase; font-family: 'Noto Sans SC', sans-serif; display: block; margin-top: 4px; }
+
+.hero-right {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 80px 56px 80px 56px;
+  background: var(--moss-pale);
+  position: relative; overflow: hidden;
+}
+.hero-right::before {
+  content: 'PORTFOLIO';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg);
+  font-size: 100px; font-weight: 600; color: rgba(74,103,65,0.04);
+  letter-spacing: 0.15em; white-space: nowrap; font-family: 'Noto Sans SC', sans-serif;
+  pointer-events: none;
+}
+.index-title { font-size: 10px; letter-spacing: 0.4em; color: var(--moss); text-transform: uppercase; margin-bottom: 32px; font-family: 'Noto Sans SC', sans-serif; }
+.index-item {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 20px 0; border-bottom: 1px solid var(--moss-line);
+  text-decoration: none; color: inherit; transition: all 0.3s; cursor: pointer;
+}
+.index-item:first-of-type { border-top: 1px solid var(--moss-line); }
+.index-item:hover .idx-arrow { opacity: 1; transform: translateX(4px); }
+.idx-num { font-size: 10px; color: var(--moss-mid); letter-spacing: 0.2em; min-width: 24px; margin-top: 4px; font-family: 'Noto Sans SC', sans-serif; }
+.idx-content { flex: 1; }
+.idx-brand { font-size: 10px; letter-spacing: 0.25em; color: var(--moss); text-transform: uppercase; font-family: 'Noto Sans SC', sans-serif; }
+.idx-title { font-size: 15px; color: var(--ink); margin-top: 4px; letter-spacing: 0.04em; font-weight: 400; }
+.idx-meta { font-size: 11px; color: var(--gray-light); margin-top: 3px; font-family: 'Noto Sans SC', sans-serif; letter-spacing: 0.05em; }
+.idx-arrow { font-size: 16px; color: var(--moss-mid); opacity: 0; transition: all 0.3s; margin-top: 8px; }
+
+/* ── PROJECT SECTION ── */
+.project { padding: 100px 56px; border-top: 1px solid var(--moss-line); }
+.project-inner { max-width: 1100px; margin: 0 auto; }
+
+.project-header { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; margin-bottom: 72px; align-items: start; }
+.project-meta { position: sticky; top: 80px; }
+.project-index { font-size: 10px; letter-spacing: 0.5em; color: var(--moss); text-transform: uppercase; display: block; margin-bottom: 20px; font-family: 'Noto Sans SC', sans-serif; }
+.project-brand { font-size: 13px; font-weight: 500; color: var(--moss-deep); letter-spacing: 0.15em; margin-bottom: 8px; font-family: 'Noto Sans SC', sans-serif; }
+.project-title { font-size: 26px; font-weight: 300; line-height: 1.4; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 24px; }
+.project-role-tag { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+.role-pill { font-size: 10px; letter-spacing: 0.15em; color: var(--moss); border: 1px solid var(--moss); padding: 4px 10px; font-family: 'Noto Sans SC', sans-serif; }
+
+.project-desc { font-size: 14px; line-height: 2.1; color: var(--gray); letter-spacing: 0.05em; margin-bottom: 36px; }
+
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--moss-line); border: 1px solid var(--moss-line); margin-bottom: 48px; }
+.kpi { background: var(--page); padding: 20px; }
+.kpi-num { font-size: 20px; font-weight: 400; color: var(--moss-deep); display: block; letter-spacing: 0.03em; }
+.kpi-label { font-size: 10px; color: var(--gray-light); letter-spacing: 0.15em; font-family: 'Noto Sans SC', sans-serif; display: block; margin-top: 4px; }
+
+/* ── CASE CARDS ── */
+.cases-title { font-size: 10px; letter-spacing: 0.4em; color: var(--moss); text-transform: uppercase; margin-bottom: 28px; font-family: 'Noto Sans SC', sans-serif; padding-bottom: 12px; border-bottom: 1px solid var(--moss-line); }
+.cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+.case-card {
+  border: 1px solid var(--moss-line);
+  background: var(--white);
+  overflow: hidden; position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none; color: inherit; display: block;
+}
+.case-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(46,66,41,0.08); }
+
+.case-visual {
+  height: 180px; background: var(--moss-pale);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--moss-line);
+}
+.case-visual.bilibili { background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%); }
+.case-visual.xiaohongshu { background: linear-gradient(135deg, #fff0f0 0%, #ffe8e8 100%); }
+.case-visual.douyin { background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%); }
+
+.platform-icon {
+  font-size: 36px; margin-bottom: 10px; opacity: 0.7;
+}
+.platform-name {
+  font-size: 10px; letter-spacing: 0.3em; color: var(--gray);
+  text-transform: uppercase; font-family: 'Noto Sans SC', sans-serif;
+}
+.play-btn {
+  position: absolute; bottom: 12px; right: 12px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--moss); display: flex; align-items: center; justify-content: center;
+}
+.play-btn::after { content: '▶'; font-size: 10px; color: white; margin-left: 2px; }
+
+.creator-tag {
+  position: absolute; top: 10px; left: 10px;
+  font-size: 9px; letter-spacing: 0.15em; color: var(--moss-deep);
+  background: rgba(255,255,255,0.85); padding: 3px 8px;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.case-body { padding: 20px 20px 22px; }
+.case-creator { font-size: 10px; font-weight: 500; color: var(--moss-deep); letter-spacing: 0.15em; margin-bottom: 8px; font-family: 'Noto Sans SC', sans-serif; text-transform: uppercase; }
+.case-title {
+  display: block;
+  font-size: 13.5px; line-height: 1.7; color: var(--moss-deep); margin-bottom: 0; letter-spacing: 0.03em;
+  text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--moss-line);
+  transition: text-decoration-color 0.2s; margin-top: 4px;
+}
+.case-card:hover .case-title { text-decoration-color: var(--moss); }
+.case-platform-row {
+  font-size: 9px; letter-spacing: 0.25em; color: var(--gray-light);
+  font-family: 'Noto Sans SC', sans-serif; text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.case-strategy {
+  display: inline-block;
+  font-size: 9px; letter-spacing: 0.2em;
+  color: var(--moss-deep); background: var(--moss-pale);
+  border: 1px solid var(--moss-line);
+  padding: 3px 10px; margin: 8px 0 10px;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+.case-interp {
+  font-size: 11.5px; line-height: 1.85; color: var(--gray);
+  letter-spacing: 0.03em; margin-bottom: 14px;
+}
+
+/* ── SEARCH TOPICS ── */
+.topics-block { margin-top: 48px; padding: 28px; background: var(--moss-pale); border: 1px solid var(--moss-line); }
+.topics-label { font-size: 10px; letter-spacing: 0.4em; color: var(--moss); text-transform: uppercase; margin-bottom: 16px; font-family: 'Noto Sans SC', sans-serif; }
+.topics-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.topic-tag {
+  font-size: 12px; color: var(--moss-deep);
+  border: 1px solid var(--moss-mid); padding: 5px 14px;
+  letter-spacing: 0.05em; font-family: 'Noto Serif SC', serif;
+  transition: all 0.2s;
+}
+.topic-tag:hover { background: var(--moss); color: white; border-color: var(--moss); }
+
+/* ── SECTION DIVIDER ── */
+.section-divider {
+  display: flex; align-items: center; gap: 20px;
+  padding: 0 56px; margin: 0;
+}
+.div-line { flex: 1; height: 1px; background: var(--moss-line); }
+.div-dot { width: 5px; height: 5px; background: var(--moss); border-radius: 50%; }
+
+/* ── HIGHLIGHT BAND ── */
+.highlight-band {
+  background: var(--moss-deep); color: white;
+  padding: 64px 56px;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+}
+.highlight-item {}
+.highlight-num { font-size: 36px; font-weight: 300; letter-spacing: 0.05em; color: var(--moss-mid); display: block; font-family: 'Noto Sans SC', sans-serif; }
+.highlight-text { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 8px; line-height: 1.8; letter-spacing: 0.05em; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--moss-line);
+  padding: 56px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-name { font-size: 14px; font-weight: 400; letter-spacing: 0.25em; color: var(--moss-deep); }
+.footer-contact { font-size: 11px; letter-spacing: 0.1em; color: var(--gray); font-family: 'Noto Sans SC', sans-serif; text-align: right; line-height: 2; }
+
+/* ── REVEAL ANIMATION ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (max-width: 768px) {
+  nav { padding: 14px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 80px 24px; }
+  .project { padding: 64px 24px; }
+  .project-header { grid-template-columns: 1fr; gap: 32px; }
+  .project-meta { position: static; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .highlight-band { grid-template-columns: 1fr; padding: 48px 24px; }
+  footer { flex-direction: column; gap: 20px; padding: 40px 24px; text-align: center; }
+  .footer-contact { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">马雅雯 · Portfolio</div>
+  <ul class="nav-links">
+    <li><a href="#p1">美的 × B站</a></li>
+    <li><a href="#p2">COLMO 软水机</a></li>
+    <li><a href="#p3">美的 618</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag reveal">市场营销作品集 · Marketing Portfolio</div>
+    <h1 class="hero-name reveal">马雅雯</h1>
+    <div class="hero-en reveal">Ma Yawen</div>
+    <div class="hero-divider reveal"></div>
+    <p class="hero-bio reveal">
+      整合营销策划 · 内容营销 · 客户执行<br>
+      擅长将产品价值转译为用户愿意讨论的内容语言
+    </p>
+    <div class="hero-stats reveal">
+      <div class="stat">
+        <span class="stat-num">9.34亿+</span>
+        <span class="stat-label">最高单项曝光</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">276.3万+</span>
+        <span class="stat-label">B站项目阅读量</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">95%</span>
+        <span class="stat-label">最高爆文率</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="index-title">项目目录 · Contents</div>
+    <a class="index-item" href="#p1">
+      <span class="idx-num">01</span>
+      <div class="idx-content">
+        <div class="idx-brand">Midea × Bilibili</div>
+        <div class="idx-title">美的 X1 富氧空调整合营销</div>
+        <div class="idx-meta">B站原生内容 · 达人共创 · 用户洞察</div>
+      </div>
+      <span class="idx-arrow">→</span>
+    </a>
+    <a class="index-item" href="#p2">
+      <span class="idx-num">02</span>
+      <div class="idx-content">
+        <div class="idx-brand">COLMO F08</div>
+        <div class="idx-title">神仙软水机「超模之选」营销</div>
+        <div class="idx-meta">小红书种草 · KOL矩阵 · 信息流投放</div>
+      </div>
+      <span class="idx-arrow">→</span>
+    </a>
+    <a class="index-item" href="#p3">
+      <span class="idx-num">03</span>
+      <div class="idx-content">
+        <div class="idx-brand">Midea × 618</div>
+        <div class="idx-title">美的「以旧换新」大促整合营销</div>
+        <div class="idx-meta">抖音达人 · 脱口秀事件 · 全渠道传播</div>
+      </div>
+      <span class="idx-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- HIGHLIGHT BAND -->
+<div class="highlight-band">
+  <div class="highlight-item reveal">
+    <span class="highlight-num">276.3万+</span>
+    <p class="highlight-text">美的 X1 项目 B 站累计阅读量，相关视频登热门榜单</p>
+  </div>
+  <div class="highlight-item reveal">
+    <span class="highlight-num">3889万+</span>
+    <p class="highlight-text">COLMO 软水机项目小红书曝光，千赞爆文率达 95%</p>
+  </div>
+  <div class="highlight-item reveal">
+    <span class="highlight-num">9.34亿+</span>
+    <p class="highlight-text">美的 618 项目全网总曝光，A3 人群新增 156 万</p>
+  </div>
+</div>
+
+<!-- ═══════ PROJECT 01 ═══════ -->
+<section class="project" id="p1">
+  <div class="project-inner">
+    <div class="project-header">
+      <div class="project-meta reveal">
+        <span class="project-index">01 · 2025</span>
+        <div class="project-brand">引力传媒 × 美的 × B站</div>
+        <h2 class="project-title">X1 富氧空调<br>整合营销项目</h2>
+        <div class="project-role-tag">
+          <span class="role-pill">客户执行</span>
+          <span class="role-pill">内容策划</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="project-desc">
+          围绕「氧气需求」议题设计 B 站原生内容传播，通过达人共创视频与评论区互动引导用户讨论富氧生活场景，收集用户对空气含氧量及健康需求的真实反馈，反向验证产品概念并预埋 X1 富氧空调核心价值点。
+        </p>
+        <p class="project-desc" style="margin-top: -8px;">
+          策略以「用户洞察先行」为核心——选择 B 站科普向与生活向两类达人，以内容讨论代替广告植入，在不强推产品的前提下完成品牌心智预埋，为后续产品上市积累真实用户声音。
+        </p>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <span class="kpi-num">276.3万+</span>
+            <span class="kpi-label">项目累计阅读量</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">热门</span>
+            <span class="kpi-label">B站热门榜单</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="cases-title">部分案例 · Case Studies</div>
+      <div class="cases-grid">
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">Bilibili · 生活向 UP主</div>
+            <div class="case-creator">糖果果的未来要发光</div>
+            <a class="case-title" href="https://b23.tv/livGIFh" target="_blank">夫妻坦白局：家庭与事业、工作与未来、婚姻里的坚持与妥协…</a>
+            <div class="case-strategy">感性共鸣种草</div>
+            <div class="case-interp">突破数码区硬核评测壁垒，在探讨婚姻事业压力的情感语境中，将产品「富氧」功能隐喻为都市生活的「氧气补给」。顺滑完成「功能—情感—价值」的深度心智渗透。</div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">Bilibili · 科普向 UP主</div>
+            <div class="case-creator">歌白说</div>
+            <a class="case-title" href="https://b23.tv/he9wK84" target="_blank">为什么说氧气其实是毒气？我们只是适应毒气的人类【氧化灾变】</a>
+            <div class="case-strategy">理性冲突教育</div>
+            <div class="case-interp">利用泛知识区专业势能，以「氧气即毒气」的逆向思维制造认知冲突。通过宏大视角的硬核科普完成空气机「鲜氧与健康」的市场教育，在长视频生态构建转化壁垒。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topics-block reveal">
+      <div class="topics-label">可在 B 站搜索以下话题词</div>
+      <div class="topics-tags">
+        <span class="topic-tag">#美的富氧空气机</span>
+        <span class="topic-tag">#美的空气机</span>
+        <span class="topic-tag">#当代人氧能补给站</span>
+        <span class="topic-tag">#美的空调</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><div class="div-line"></div><div class="div-dot"></div><div class="div-line"></div></div>
+
+<!-- ═══════ PROJECT 02 ═══════ -->
+<section class="project" id="p2">
+  <div class="project-inner">
+    <div class="project-header">
+      <div class="project-meta reveal">
+        <span class="project-index">02 · 2025</span>
+        <div class="project-brand">引力传媒 × COLMO</div>
+        <h2 class="project-title">F08 神仙软水机<br>「超模之选」营销</h2>
+        <div class="project-role-tag">
+          <span class="role-pill">客户执行</span>
+          <span class="role-pill">内容营销</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="project-desc">
+          结合时装周节点打造「超模之选」产品心智，通过头部超模达人与明星化妆师、护肤类 KOL 联动种草，将软水机与高端生活方式及美容护肤场景深度绑定，并配合小红书信息流与搜索投放扩大传播覆盖。
+        </p>
+        <p class="project-desc" style="margin-top: -8px;">
+          达人矩阵策略：头部超模造势声量，中腰部明星化妆师和护肤博主精准渗透目标圈层，同步配合品类词与竞品词的搜索拦截，实现从种草到搜索转化的完整路径。
+        </p>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <span class="kpi-num">3889万+</span>
+            <span class="kpi-label">项目总曝光</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">397万+</span>
+            <span class="kpi-label">总阅读量</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">95%</span>
+            <span class="kpi-label">千赞爆文率</span>
+          </div>
+        </div>
+        <div class="kpi-grid" style="margin-top:1px;">
+          <div class="kpi">
+            <span class="kpi-num">6.9万+</span>
+            <span class="kpi-label">总互动量</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">行业第3</span>
+            <span class="kpi-label">AIPS人群规模</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">149→12</span>
+            <span class="kpi-label">SPU排名跃升</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="cases-title">部分案例 · Case Studies</div>
+      <div class="cases-grid">
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">小红书 · 头部达人 · 生活方式</div>
+            <div class="case-creator">熊布利</div>
+            <a class="case-title" href="http://xhslink.com/o/1DeP0uOdkfU" target="_blank">40岁，高能量中女回归！40岁高能量姐姐，我宣布恢复…</a>
+            <div class="case-strategy">受众精细化运营</div>
+            <div class="case-interp">人设与受众高度重合，将「换季肤发困扰」与「底层水质」深度绑定。通过高能量女性身份突围中女群体心智，完成精准选购教育，实现 CPM/CPC 全场最低的品效合一。</div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">小红书 · 中腰部 · 明星化妆师</div>
+            <div class="case-creator">明星化妆师朴东民</div>
+            <a class="case-title" href="http://xhslink.com/o/4M73OAHjt4C" target="_blank">明星化妆师不会告诉你的事……</a>
+            <div class="case-strategy">专业视角背书</div>
+            <div class="case-interp">借势「时装周妆造」热点，以专业身份溯源底层水质问题。通过「身份标签 + 原生热点」组合拳及评论区精细化运营，成功缩短从「社交话题」到「品类好奇」的转化路径。</div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">小红书 · 中腰部 · 模特</div>
+            <div class="case-creator">方凯瑞 CARRIE</div>
+            <a class="case-title" href="http://xhslink.com/o/8BMNrMhbhuq" target="_blank">奔5有娃的风光生活其实都是水货？</a>
+            <div class="case-strategy">场景痛点击穿</div>
+            <div class="case-interp">聚焦高净值家庭，以「风光生活 vs 水货」反差感切入。打破家电参数营销，深挖熟龄女性护肤焦虑，建立「高端生活配高端软水」的强心智绑定。</div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">小红书 · 中腰部 · 模特</div>
+            <div class="case-creator">ziwen 关茈文</div>
+            <a class="case-title" href="http://xhslink.com/o/5njaBWRSyZC" target="_blank">杭州✈️巴黎✈️上海 敏感皮拯救之旅</a>
+            <div class="case-strategy">高端调性赋能</div>
+            <div class="case-interp">精准锚定商旅及泛美妆人群，通过沉浸式差旅 Vlog 直击「水土不服」敏感肌痛点。将软水机重塑为「超模级美容单品」，高效完成从痛点共鸣到产品种草的链路转化。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topics-block reveal">
+      <div class="topics-label">可在小红书搜索以下话题词</div>
+      <div class="topics-tags">
+        <span class="topic-tag">#COLMO神仙软水机</span>
+        <span class="topic-tag">#图灵新能源热水器</span>
+        <span class="topic-tag">#超模级护理</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><div class="div-line"></div><div class="div-dot"></div><div class="div-line"></div></div>
+
+<!-- ═══════ PROJECT 03 ═══════ -->
+<section class="project" id="p3">
+  <div class="project-inner">
+    <div class="project-header">
+      <div class="project-meta reveal">
+        <span class="project-index">03 · 2025</span>
+        <div class="project-brand">引力传媒 × 美的 × 618</div>
+        <h2 class="project-title">「以旧换新」<br>大促整合营销</h2>
+        <div class="project-role-tag">
+          <span class="role-pill">客户执行</span>
+          <span class="role-pill">整合营销</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="project-desc">
+          围绕 618 节点策划「美的520美美生活奇妙夜」脱口秀内容事件，将「以旧换新」利益点从功能性促销话语转化为情绪共振内容，通过达人内容联动与平台传播放大品牌情绪表达，实现品牌声量与电商转化双提升。
+        </p>
+        <p class="project-desc" style="margin-top: -8px;">
+          统筹14位抖音达人 + 2位艺人分层投放，覆盖搞笑剧情、情感剧情、摄影艺术等多元内容类型，爆文率85%，曝光达成率127%，成功将「美的以旧换新」搜索词推至行业 TOP1。
+        </p>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <span class="kpi-num">9.34亿+</span>
+            <span class="kpi-label">全网总曝光</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">156万</span>
+            <span class="kpi-label">A3人群新增</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">+38.2%</span>
+            <span class="kpi-label">品牌搜索提升</span>
+          </div>
+        </div>
+        <div class="kpi-grid" style="margin-top:1px;">
+          <div class="kpi">
+            <span class="kpi-num">127%</span>
+            <span class="kpi-label">曝光达成率</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">85%</span>
+            <span class="kpi-label">达人爆文率</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num">TOP1</span>
+            <span class="kpi-label">行业搜索词排名</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="cases-title">部分案例 · Case Studies</div>
+      <div class="cases-grid">
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">抖音 · 艺人 · 情感</div>
+            <div class="case-creator">杨天真</div>
+            <a class="case-title" href="https://v.douyin.com/EEEQ_H7SDWI/" target="_blank">今天又认识个「美美的」新朋友～和我一起，探索美的的…</a>
+            <div class="case-strategy">头部势能引爆</div>
+            <div class="case-interp">借势高流量经纪人 IP，以「交新朋友」的原生社交语境软化商业植入。利用名人背书直击「全球美粉季」核心利益点，高效聚拢流量，缩短大促节点的拔草闭环。</div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-body">
+            <div class="case-platform-row">抖音 · 达人 · 搞笑剧情</div>
+            <div class="case-creator">郭嘉峰</div>
+            <a class="case-title" href="https://v.douyin.com/6YDHuGaeAb4/" target="_blank">长辈不可能做的事 #美的以旧换新 #美的618…</a>
+            <div class="case-strategy">原生内容带货</div>
+            <div class="case-interp">洞察家庭代际消费差异，以高网感脱口秀还原「劝长辈换旧家电」的真实场景。用喜剧笑点消解广告防御，巧妙透传「以旧换新省钱公式」，强力撬动下沉及泛娱乐市场转化。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topics-block reveal">
+      <div class="topics-label">可在抖音搜索以下话题词</div>
+      <div class="topics-tags">
+        <span class="topic-tag">#美的以旧换新</span>
+        <span class="topic-tag">#美的618省钱公式</span>
+        <span class="topic-tag">#美的全球美粉季</span>
+        <span class="topic-tag">#是脱口秀团建我们有救了</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <div class="footer-name">马雅雯 · 市场营销作品集</div>
+  <div class="footer-contact">
+    13546484881<br>
+    13546484881@163.com
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
